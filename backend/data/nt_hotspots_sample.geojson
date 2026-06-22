@@ -1,0 +1,23 @@
+{
+  "type": "FeatureCollection",
+  "name": "nt_hotspots_sample",
+  "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+  "features": [
+    { "type": "Feature", "geometry": { "type": "Point", "coordinates": [130.84, -12.46] }, "properties": { "longitude": 130.84, "latitude": -12.46, "datetime": "2026-06-20T03:10:00Z", "hours": 1, "confidence": "high", "satellite": "Himawari-9", "temp_k": 412, "power_mw": 38 } },
+    { "type": "Feature", "geometry": { "type": "Point", "coordinates": [131.13, -12.58] }, "properties": { "longitude": 131.13, "latitude": -12.58, "datetime": "2026-06-20T02:40:00Z", "hours": 2, "confidence": "high", "satellite": "NOAA-20", "temp_k": 401, "power_mw": 25 } },
+    { "type": "Feature", "geometry": { "type": "Point", "coordinates": [132.83, -12.67] }, "properties": { "longitude": 132.83, "latitude": -12.67, "datetime": "2026-06-20T01:05:00Z", "hours": 3, "confidence": "high", "satellite": "Suomi-NPP", "temp_k": 388, "power_mw": 19 } },
+    { "type": "Feature", "geometry": { "type": "Point", "coordinates": [132.26, -14.46] }, "properties": { "longitude": 132.26, "latitude": -14.46, "datetime": "2026-06-19T23:50:00Z", "hours": 5, "confidence": "medium", "satellite": "Aqua", "temp_k": 360, "power_mw": 11 } },
+    { "type": "Feature", "geometry": { "type": "Point", "coordinates": [130.69, -13.75] }, "properties": { "longitude": 130.69, "latitude": -13.75, "datetime": "2026-06-19T22:30:00Z", "hours": 6, "confidence": "medium", "satellite": "NOAA-20", "temp_k": 355, "power_mw": 9 } },
+    { "type": "Feature", "geometry": { "type": "Point", "coordinates": [131.83, -13.82] }, "properties": { "longitude": 131.83, "latitude": -13.82, "datetime": "2026-06-19T20:15:00Z", "hours": 9, "confidence": "medium", "satellite": "Himawari-9", "temp_k": 349, "power_mw": 8 } },
+    { "type": "Feature", "geometry": { "type": "Point", "coordinates": [133.07, -14.92] }, "properties": { "longitude": 133.07, "latitude": -14.92, "datetime": "2026-06-19T17:40:00Z", "hours": 12, "confidence": "low", "satellite": "Aqua", "temp_k": 332, "power_mw": 5 } },
+    { "type": "Feature", "geometry": { "type": "Point", "coordinates": [136.30, -16.07] }, "properties": { "longitude": 136.30, "latitude": -16.07, "datetime": "2026-06-19T15:20:00Z", "hours": 14, "confidence": "medium", "satellite": "Suomi-NPP", "temp_k": 358, "power_mw": 10 } },
+    { "type": "Feature", "geometry": { "type": "Point", "coordinates": [134.50, -12.90] }, "properties": { "longitude": 134.50, "latitude": -12.90, "datetime": "2026-06-19T14:05:00Z", "hours": 15, "confidence": "high", "satellite": "NOAA-21", "temp_k": 395, "power_mw": 22 } },
+    { "type": "Feature", "geometry": { "type": "Point", "coordinates": [136.78, -12.18] }, "properties": { "longitude": 136.78, "latitude": -12.18, "datetime": "2026-06-19T11:30:00Z", "hours": 18, "confidence": "medium", "satellite": "Himawari-9", "temp_k": 351, "power_mw": 7 } },
+    { "type": "Feature", "geometry": { "type": "Point", "coordinates": [131.00, -15.60] }, "properties": { "longitude": 131.00, "latitude": -15.60, "datetime": "2026-06-19T08:10:00Z", "hours": 22, "confidence": "low", "satellite": "Aqua", "temp_k": 330, "power_mw": 4 } },
+    { "type": "Feature", "geometry": { "type": "Point", "coordinates": [133.54, -17.55] }, "properties": { "longitude": 133.54, "latitude": -17.55, "datetime": "2026-06-19T05:45:00Z", "hours": 25, "confidence": "medium", "satellite": "NOAA-20", "temp_k": 356, "power_mw": 9 } },
+    { "type": "Feature", "geometry": { "type": "Point", "coordinates": [134.19, -19.65] }, "properties": { "longitude": 134.19, "latitude": -19.65, "datetime": "2026-06-18T23:20:00Z", "hours": 31, "confidence": "low", "satellite": "Suomi-NPP", "temp_k": 333, "power_mw": 5 } },
+    { "type": "Feature", "geometry": { "type": "Point", "coordinates": [135.80, -19.20] }, "properties": { "longitude": 135.80, "latitude": -19.20, "datetime": "2026-06-18T20:00:00Z", "hours": 34, "confidence": "low", "satellite": "Aqua", "temp_k": 328, "power_mw": 3 } },
+    { "type": "Feature", "geometry": { "type": "Point", "coordinates": [133.88, -23.70] }, "properties": { "longitude": 133.88, "latitude": -23.70, "datetime": "2026-06-18T16:30:00Z", "hours": 38, "confidence": "low", "satellite": "NOAA-21", "temp_k": 326, "power_mw": 3 } },
+    { "type": "Feature", "geometry": { "type": "Point", "coordinates": [130.99, -25.24] }, "properties": { "longitude": 130.99, "latitude": -25.24, "datetime": "2026-06-18T12:10:00Z", "hours": 44, "confidence": "low", "satellite": "Himawari-9", "temp_k": 322, "power_mw": 2 } }
+  ]
+}
