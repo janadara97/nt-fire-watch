@@ -1,6 +1,8 @@
 pipeline {
   agent any
-
+  tools {
+        nodejs 'node20'      // must match the name from Step 2
+    }
   stages {
     stage('Install Backend') {
       steps {
