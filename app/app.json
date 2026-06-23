@@ -38,7 +38,8 @@
             "backgroundColor": "#000000"
           }
         }
-      ]
+      ],
+      "@clerk/expo"
     ],
     "experiments": {
       "typedRoutes": true,

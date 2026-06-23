@@ -1,7 +1,8 @@
-import { useEffect, useState } from "react"
+import { use, useEffect, useState } from "react"
 import { MapContainer, TileLayer, CircleMarker, Popup } from "react-leaflet"
 import { fetchHotspots } from "../services/api"
 import "leaflet/dist/leaflet.css"
+import { useAuth } from "@clerk/expo"
 
 
 function colourForHours(hours) {
@@ -13,10 +14,16 @@ function colourForHours(hours) {
 
 export default function MapView() {
   const [hotspots, setHotspots] = useState([])
+  const {getToken} = useAuth()
 
 
-  useEffect(() => {
-    fetchHotspots().then(setHotspots)
+  useEffect(() =>  {
+    async function load() {
+      const token = await getToken();
+      const data = await fetchHotspots(token)
+      setHotspots(data)
+    }
+    load()
   }, [])
 
   return (
