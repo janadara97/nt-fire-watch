@@ -35,10 +35,17 @@ pipeline {
       }
     }
     stage('Deploy') {
-      steps {
-        sh 'echo "Deploying the application..."'
-        // Add your deployment commands here
-      }
+    steps {
+        sshagent(['vm-deploy-key']) {
+            sh '''
+                ssh -o StrictHostKeyChecking=no azureuser@20.211.41.139 "
+                    cd ~/nt-fire-watch &&
+                    git pull &&
+                    docker compose up -d --build
+                "
+            '''
+        }
     }
+}
   }
 }
