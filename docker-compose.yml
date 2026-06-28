@@ -1,0 +1,35 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: ./backend
+    ports:
+      - "3000:3000"
+    depends_on:
+      - db
+    environment:
+      DB_HOST: db
+  
+  db:
+    image: postgis/postgis:16-3.4
+    environment:
+      POSTGRES_USER: firewatch
+      POSTGRES_PASSWORD: firewatch
+      POSTGRES_DB: firewatch
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ./backend/db/init.sql:/docker-entrypoint-initdb.d/init.sql
+
+  apache:
+    build:
+      context: .
+      dockerfile: apache/Dockerfile
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+volumes:
+  pgdata:
