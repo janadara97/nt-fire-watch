@@ -9,7 +9,13 @@ router.get("/hotspot", async(req, res) => {
     return res.status(401).json({ error: "Unauthorized" })
   }
   try {
-   const result = await pool.query("SELECT id, datetime, hours, confidence, satellite, ST_AsGeoJSON(geom)::json AS geometry FROM hotspots WHERE ST_Within(geom, ST_MakeEnvelope(129, -26, 138, -11, 4326))")
+   const result = await pool.query(
+     `SELECT id, datetime,
+        ROUND((EXTRACT(EPOCH FROM (now() - datetime)) / 3600)::numeric) AS hours,
+        confidence, satellite, ST_AsGeoJSON(geom)::json AS geometry
+      FROM hotspots
+      WHERE ST_Within(geom, ST_MakeEnvelope(129, -26, 138, -11, 4326))`
+   )
    const data = result.rows;
    res.json(data);
   }
