@@ -40,7 +40,8 @@ pipeline {
             sh '''
                 ssh -o StrictHostKeyChecking=no azureuser@20.211.41.139 "
                     cd ~/nt-fire-watch &&
-                    git pull &&
+                    git reset --hard origin/main &&
+                    git pull --rebase origin main &&
                     docker compose up -d --build
                 "
             '''
