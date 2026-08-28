@@ -6,6 +6,7 @@ CREATE TABLE IF NOT EXISTS hotspots (
   hours      INTEGER,
   confidence TEXT,
   satellite  TEXT,
+  source_id  BIGINT UNIQUE,
   geom       geometry(Point, 4326)
 );
 
