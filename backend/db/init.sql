@@ -10,6 +10,18 @@ CREATE TABLE IF NOT EXISTS hotspots (
   geom       geometry(Point, 4326)
 );
 
+CREATE TABLE IF NOT EXISTS alert_zones (
+  id            SERIAL PRIMARY KEY,
+  user_id       TEXT NOT NULL,
+  center        geometry(Point, 4326) NOT NULL,
+  radius_meters INTEGER NOT NULL,
+  notify_email  BOOLEAN NOT NULL DEFAULT true,
+  created_at    TIMESTAMP NOT NULL DEFAULT now()
+);
+
+CREATE INDEX IF NOT EXISTS idx_alert_zones_user_id ON alert_zones(user_id);
+CREATE INDEX IF NOT EXISTS idx_alert_zones_center ON alert_zones USING GIST(center);
+
 INSERT INTO hotspots (datetime, hours, confidence, satellite, geom) VALUES
   ('2026-06-20T03:10:00Z', 1,  'high',   'Himawari-9', ST_SetSRID(ST_MakePoint(130.84, -12.46), 4326)),
   ('2026-06-20T02:40:00Z', 2,  'high',   'NOAA-20',    ST_SetSRID(ST_MakePoint(131.13, -12.58), 4326)),
