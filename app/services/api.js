@@ -1,5 +1,5 @@
 import {toFeatureCollection} from "./transformers"
-const API_URL = process.env.EXPO_PUBLIC_API_URL
+const API_URL = process.env.EXPO_PUBLIC_API_URL || ""
 
 async function apiGET(endpoint, token) {
   try {
