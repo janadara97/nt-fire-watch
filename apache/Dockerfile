@@ -19,7 +19,7 @@ RUN npx expo export --platform web
 # -------------------------
 FROM almalinux:9
 
-RUN dnf install -y httpd && dnf clean all
+RUN dnf install -y httpd mod_ssl && dnf clean all
 
 COPY --from=frontend-build /app/dist/ /var/www/html/
 
