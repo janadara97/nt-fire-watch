@@ -1,7 +1,6 @@
 import { useState } from "react";
 import MapView from "../components/MapView.web";
 import HotspotCard from "../components/HotspotCard";
-import FireHotspotWeb from "../components/FireHotspotWeb";
 import { useAuth } from "@clerk/expo";
 import { SignInButton, UserButton } from "@clerk/expo/web";
 import { StyleSheet, Text, View } from "react-native";
